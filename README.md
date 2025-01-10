@@ -1,4 +1,4 @@
-# Chatbot From Files
+# RAG Chatbot From Files
 
 This project aims to implement a robust web application for a chatbot that interacts with your personal documents and data, providing responses through semantic search. All responses are specific to the loaded file; if a question is unrelated to the file, the chatbot will not respond. The project also includes a file upload feature that allows users to feed the system with information. It also includes advanced features such as translation, voice recognition, and enhanced user question techniques.
 
