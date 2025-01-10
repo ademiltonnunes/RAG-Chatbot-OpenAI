@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>SFBU - Customer Support System</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='SFBU-logo.png') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}" />
+
+    <!-- Import this CDN to use icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .custom-btn-color {
+            background-color: #2B2A4C;
+            border-color: #2B2A4C; /* If you want the border color to match the background */
+            color: rgb(255, 255, 255); /* For text color */
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <!-- Logout Link -->
+       
+    </header>
+    <!-- Main container  -->
+    <div class="container">
+        <!-- <div class="loader" id="loaderAnswerQuestion">Wait! Answering question...</div> -->
+       
+        <div class="input-group">
+        <p><button type="button" class="btn custom-btn-color" onclick="location.href='{{ url_for('files_page') }}'">Content Page</button></p>
+
+        
+        <!--  Message header section starts    -->
+    </div>
+
+        <div>
+            <div class="msg-header">
+                <div class="container1">
+                    <img src="{{ url_for('static', filename='SFBU.png') }}" class="msgimg">
+                    <div class="active ">
+                        <p>Customer Support System</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Message header section ends -->
+            <!-- Chat inbox section starts -->
+            <div class="chat-page">
+                <div class="msg-inbox">
+                    <div class="chats">
+                        <div class="msg-page" id="conversation">
+                            <!-- Contains the incoming and outgoing messages -->
+                        </div>
+                    </div>
+                    <!--  Message bottom section starts -->
+                    <div class="msg-bottom">
+                        <div class="input-group">
+                            <input type="text" id="inputQuestion" class="form-control" placeholder="Type your question here..." onkeydown="handleKeyDown(event)">
+                            <button class="btn input-group-text" onclick="submitQuestion()"><i class="bi bi-send"></i></button>
+                            <button class="btn input-group-text" id="startRecordingButton" onclick="startRecording()"><i class="bi bi-mic"></i></button>
+                            <button class="btn input-group-text" id="stopRecordingButton" style="display: none;" onclick="stopRecording()"><i class="bi bi-stop-circle"></i></button>
+                        </div>
+                        </div>
+                    </div>
+                    <!-- Message bottom section ends. -->
+                </div>
+            </div>
+        </div>
+        <script src="{{ url_for('static', filename='index.js') }}"></script>
+</body>
+
+</html>

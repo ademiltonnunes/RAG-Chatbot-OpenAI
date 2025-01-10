@@ -1,0 +1,17 @@
+python-dotenv
+flask
+openai==0.28.0
+langchain
+langchain-community
+pydantic==1.10.9
+yt-dlp
+pydub
+pypdf
+beautifulsoup4
+tiktoken
+langchain[docarray]
+chromadb
+SpeechRecognition
+openai-whisper
+gTTS
+googletrans==4.0.0-rc1
